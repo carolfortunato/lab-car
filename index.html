@@ -23,14 +23,121 @@
           <a class="nav-link" href="#">Viaja</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Conduce</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#driverModal">Conduce</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inicia sesíon</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Inicia sesíon</a>
         </li>
       </ul>
     </div>
   </nav>
+  <!--  Modal login  -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <small id="emailHelp" class="form-text text-muted">Forgot your password? Click here.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Modal registro  -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registrate</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <button type="submit" class="btn btn-dark" data-toggle="modal" data-target="#loginModal">ya tienes una cuenta?</button>
+            <p>O CREA UNA CUENTA NUEVA</p>
+          <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="E-mail">                
+                <input type="text" class="form-control" placeholder="Telefone">
+                <input type="text" class="form-control" placeholder="Contraseña">
+                <input type="text" class="form-control" placeholder="Ciudad">
+                <input type="text" class="form-control" placeholder="(opcional) Código de invitácion">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Modal condutor  -->
+  <div class="modal fade" id="driverModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Conviertete en un conductor<h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Tienes vehículo de 4 puertas?</label>
+                <select class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Marca</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Marca">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Modelo</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Modelo">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Año</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Año">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Número de la matrícula</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Número de la matrícula">
+              </div>
+              <small>La informatión de la matrícula ayuda a los clientes a identificar tu vehículo</small>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   <!--  HEADER  -->
   <header>
     <div class="empty-space"></div>
@@ -41,11 +148,11 @@
             <h1>Disfruta del viaje</h1>
             <h1>Eres Dueño de tu tiempo</h1>
             <h3>Viaja con <img src="assets/images/logoBlanco.png">  </h3>
-            <button type="button" class="btn btn-light">REGISTRATE</button>
-            <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#registerModal" >REGISTRATE</button>
+            <div class="d-flex justify-content-center o-bien">
               <p>O bien</p>
             </div>
-            <button type="button" class="btn btn-light">Conviertete en un conductor</button>  
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#driverModal">Conviertete en un conductor</button>  
           </div>
           <div class="mobile">
             <h1>Comienza a viajar con <img src="assets/images/logoBlanco.png">  </h1>
@@ -59,7 +166,7 @@
     <div class="row align-items-center">
       <div class="col-md-9">
           <div class="row">
-            <div class="col-sm">
+            <div class="col-sm cellphone">
               <img src="assets/images/iPhone6Plus.png">
             </div>
             <div class="col-sm">
@@ -81,7 +188,7 @@
         <div class="mask"></div>
         <h2>Conduce cuando quieras</h2>
         <p>LabCar es una opción flexible para alcanzar tus metas financieras.</p>
-        <button type="button" class="btn btn-warning">Conviertete en un conductor</button>
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#driverModal">Conviertete en un conductor</button>
       </div>
     </div>
   </section>
@@ -93,10 +200,10 @@
           <h2>Tarifas</h2>
           <p>Consulta las tarifas LabCar aquí</p>
           <div class="form-group">
-            <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ingrese su punto de partida">
+            <input class="form-control fee-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ingrese su punto de partida">
           </div>
           <div class="form-group">
-            <input class="form-control" id="exampleInputPassword1" placeholder="ingrese su destino">
+            <input class="form-control fee-form" id="exampleInputPassword1" placeholder="ingrese su destino">
           </div>
           <button type="submit" class="btn btn-light">TRAZAR RUTA</button>
         </form>

@@ -10,10 +10,12 @@ Esse é um desafio de design web responsivo e mobile que inclui modais e mapa.
 
 ### Screenshot
 desktop
-![screen shot](https://raw.githubusercontent.com/carolfortunato/a-freelancer/master/screenshot.png)
+
+![screen shot](https://raw.githubusercontent.com/carolfortunato/labcar/master/screenshot1.png)
 
 mobile
-![screen shot](https://raw.githubusercontent.com/carolfortunato/a-freelancer/master/screenshot.png)
+
+![screen shot](https://raw.githubusercontent.com/carolfortunato/labcar/master/screenshot2.png)
 
 ### Acesse o site
 [Labcar](https://carolfortunato.github.io/labcar/)
